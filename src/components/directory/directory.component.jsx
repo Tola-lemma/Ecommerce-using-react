@@ -1,5 +1,6 @@
 import React from 'react';
-class Directory extends react.Component{
+import MenuItem from '../menu/menu-item.component';
+class Directory extends React.Component{
     constructor(){
         super();
         this.state ={
@@ -17,19 +18,20 @@ class Directory extends react.Component{
                 title:'Sneakers',
                 imageurl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
                 id:3
-            },
-            {
-                title:'Womens',
-                imageurl:'https://i.ibb.co/GCCdy8t/womens.png',
-                id:4
-            },
-            {
-                title:'Mens',
-                imageurl:'https://i.ibb.co/R70vBrQ/men.png',
-                id:5
-            }
-        
-        ]
+            }]
         }
     }
+    render(){
+        return(
+            <div className="row mt-2 m-0">
+                {
+                    this.state.sections.map(({title,imageurl,id})=>(
+                        <MenuItem key={id} title={title} imageurl={imageurl}/>
+                    ))
+                }
+            </div>
+        )
+    }
 }
+
+export default Directory;
