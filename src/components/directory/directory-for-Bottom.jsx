@@ -30,7 +30,6 @@ class DirectoryB extends React.Component{
                 ))
             }
         </div></div>
-        
         )
     }
 }

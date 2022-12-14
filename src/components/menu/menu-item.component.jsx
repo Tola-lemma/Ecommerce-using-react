@@ -1,6 +1,5 @@
 import React from 'react';
 const MenuItem=({ title,imageurl})=>(
- 
 <div 
  style={{
    backgroundImage:`url(${imageurl})`
@@ -11,6 +10,5 @@ const MenuItem=({ title,imageurl})=>(
     <span className="subtitle">SHOP NOW</span>
  </div>
 </div>
-
 );
 export default MenuItem;
