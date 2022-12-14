@@ -7,26 +7,29 @@ class Directory extends React.Component{
             sections:[{
                 title:'hats',
                 imageurl:'https://i.ibb.co/cvpntL1/hats.png',
-                id:1
+                id:1,
+                linkurl:'hats'
             },
             {
                 title:'Jackets',
                 imageurl:'https://i.ibb.co/px2tCc3/jackets.png',
-                id:2
+                id:2,
+                linkurl:''
             },
             {
                 title:'Sneakers',
                 imageurl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
-                id:3
+                id:3,
+                linkurl:''
             }]
         }
     }
     render(){
         return(
-            <div className="row mt-2 m-0">
+            <div className="row mt-2">
                 {
-                    this.state.sections.map(({title,imageurl,id})=>(
-                        <MenuItem key={id} title={title} imageurl={imageurl}/>
+                    this.state.sections.map(({id,...otherSectionProps})=>(
+                        <MenuItem key={id} {...otherSectionProps}/>
                     ))
                 }
             </div>

@@ -21,14 +21,15 @@ class DirectoryB extends React.Component{
     }
     render(){
         return(
-        
-            <div className="row mt-2 m-0">
+        <div>
+            <div className="row mt-2">
             {
-                this.state.section.map(({title,imageurl,id})=>(
-                    <MenuItemB key={id} title={title} imageurl={imageurl}/>
+                // this.state.section.map(({title,imageurl,id})=>(  //the same as the the below one
+                    this.state.section.map(({id,...theSameOtherState})=>(
+                    <MenuItemB key={id} {...theSameOtherState}/>
                 ))
             }
-        </div>
+        </div></div>
         
         )
     }
